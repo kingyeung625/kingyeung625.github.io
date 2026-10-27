@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="前往永得利廣場穿梭巴士時間表。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#efeae2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121411" media="(prefers-color-scheme: dark)">
+  <title>首頁</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23243126'/%3E%3Cpath d='M8 20.5V13.2c0-1.2.7-2.2 1.8-2.6l4.6-1.7c.7-.3 1.5-.3 2.2 0l4.6 1.7c1.1.4 1.8 1.4 1.8 2.6v7.3' fill='none' stroke='%23f6f3ec' stroke-width='1.7' stroke-linejoin='round'/%3E%3Cpath d='M7 20.5h18M10.5 20.5v2.2M21.5 20.5v2.2' fill='none' stroke='%23f6f3ec' stroke-width='1.7' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='16.2' r='1' fill='%23f6f3ec'/%3E%3Ccircle cx='20' cy='16.2' r='1' fill='%23f6f3ec'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #efeae2;
+      --bg-shade: #e4ddd2;
+      --ink: #241f1a;
+      --muted: #6d665d;
+      --button: #243126;
+      --button-hover: #1a261c;
+      --button-text: #f6f3ec;
+      --ring: #c4552a;
+      --shadow: 0 16px 40px rgba(36, 31, 26, 0.12);
+      color-scheme: light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121411;
+        --bg-shade: #1c1f1a;
+        --ink: #f3efe6;
+        --muted: #b7b1a6;
+        --button: #e7e1d6;
+        --button-hover: #f6f3ec;
+        --button-text: #1a1c17;
+        --ring: #e8a07a;
+        --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+        color-scheme: dark;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, var(--bg-shade), transparent 60%),
+        var(--bg);
+      color: var(--ink);
+      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Heiti TC", "WenQuanYi Micro Hei", sans-serif;
+    }
+
+    main {
+      width: min(100%, 28rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .shuttle-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+      min-height: 64px;
+      padding: 18px 22px;
+      border-radius: 16px;
+      background: var(--button);
+      color: var(--button-text);
+      text-decoration: none;
+      font-size: clamp(1.05rem, 4.4vw, 1.2rem);
+      font-weight: 600;
+      line-height: 1.45;
+      text-align: left;
+      box-shadow: var(--shadow);
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .shuttle-link:hover {
+      background: var(--button-hover);
+      transform: translateY(-1px);
+    }
+
+    .shuttle-link:active {
+      transform: translateY(0);
+    }
+
+    .shuttle-link:focus-visible {
+      outline: 3px solid var(--ring);
+      outline-offset: 3px;
+    }
+
+    .shuttle-link svg {
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .shuttle-link {
+        transition: none;
+      }
+
+      .shuttle-link:hover,
+      .shuttle-link:active {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">首頁</p>
+    <a class="shuttle-link" href="https://lo-code.com/evergain-shuttle/">
+      <span>永得利廣場穿梭巴士時間表</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"></path>
+        <path d="M13 6l6 6-6 6"></path>
+      </svg>
+    </a>
+  </main>
+</body>
+</html>
